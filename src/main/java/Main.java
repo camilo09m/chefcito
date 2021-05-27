@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        iniciador();
         menu();
     }
     public static void menu() {
@@ -39,5 +40,12 @@ public class Main {
 
        }
      }
-
+    public static void iniciador(){
+        ManejoArchivo archivo = new ManejoArchivo();
+        archivo.crearDirectorio(); //crea un directorio en el cual se almacenará toda la informacion de las recetas por archivo
+        //crea el archivo de recetas para cada comida:
+        archivo.crearArchivoDesayuno();
+        archivo.crearArchivoAlmuerzo();
+        archivo.crearArchivoCena();
+    }
 }
