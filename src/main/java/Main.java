@@ -7,7 +7,7 @@ public class Main {
     public static void menu() {
         System.out.println("=========================================");
         System.out.println("Seleccione una opcion:");
-        System.out.println("1)Ingresar horarios de comidas \n2)Buscar receta \n3)Salir");
+        System.out.println("1)Organizador de comidas \n2)Buscador de receta \n3)Salir");
         System.out.println("=========================================");
         opcion();
 
@@ -20,7 +20,8 @@ public class Main {
      public static void validarOpcion(String opcion){
        switch (opcion){
          case "1": {
-             System.out.println("hola bb");
+             Organizador org = new Organizador();
+             org.menuOrg();
              menu();
              break;
          }
